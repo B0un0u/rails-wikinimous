@@ -1,0 +1,18 @@
+<h1>My articles</h1>
+
+    <div class="container">
+  <% @articles.each do |article| %>
+  <div row>
+    <h5 class="card-title"><%= link_to(article.title, article_path(article)) %></h5>
+    <a href="#" class="btn btn-primary">see details</a>
+    <br>
+    <%= link_to "Delete",
+            article_path(article),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %> 
+    <br>
+</div>
+  <% end %>
+  </div>
+  
+<%= link_to('Add a new article', new_article_path) %>

@@ -1,0 +1,16 @@
+<div class="d-flex flex-column">
+<h2>Article details</h2>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @article.title %></h5>
+    <p class="card-text"><%= @article.content %></p>
+    <a href="articles" class="btn btn-primary">Back to list</a>
+    <a href="articles" class="btn btn-success">Edit article</a>
+  </div>
+</div>
+
+<%= link_to('Edit article', edit_article_path) %>
+<br>
+<%= link_to('Back to list', articles_path) %>
+</div>
